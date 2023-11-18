@@ -11,7 +11,7 @@ const saveFormState = throttle(() => {
     message: messageInput.value,
   };
 
-  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+  // localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }, 500);
 
 emailInput.addEventListener('input', saveFormState);
@@ -32,7 +32,7 @@ feedbackForm.addEventListener('submit', event => {
   messageInput.value = '';
 });
 
-const storedFormState = JSON.parse(localStorage.getItem('feedback-form-state'));
+// const storedFormState = JSON.parse(localStorage.getItem('feedback-form-state'));
 
 if (storedFormState) {
   emailInput.value = storedFormState.email;
